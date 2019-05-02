@@ -19,9 +19,11 @@ Attacker VM has to be on the Attacker System, Victim VM has to be on Victim Syst
 ## Virtual Machines
 This demo requires 4 VMs.
 
-Base VM config:
- - Ubuntu 18.04 Server (unless otherwise notedd)
- - 30 GB disk (thin alloc is fine)
+Base VM config (unless otherwise noted):
+ - Ubuntu 18.04 Server
+ - 1 vCPU
+ - 2 GB RAM
+ - 20 GB disk (thin alloc is fine)
  - 2 NICs:
    1. Bridged over WiFi host NIC
       - Subnet mask: /24 (255.255.255.0)
@@ -42,6 +44,7 @@ Specific VM configs:
    - Username: `vpnuser`
    - Password: `cantsniffthis`
  - Attacker
+   - 2 vCPU
    - WiFi IP: 172.16.10.50
    - Wired IP: 172.20.10.50
    - Username: `badguy`
@@ -49,6 +52,8 @@ Specific VM configs:
    - USB Passthrough the Alfa NIC to this VM
  - Victm
    - Ubuntu 18.04 Desktop
+   - 2 vCPU
+   - 4 GB RAM
    - WiFi IP: 172.16.10.60
    - Wired IP: 172.20.10.60
    - Username: `demouser`
