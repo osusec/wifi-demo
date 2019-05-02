@@ -1,0 +1,6 @@
+---
+# Webserver group variables
+
+ansible_user: webuser
+ansible_ssh_pass: ultrasecure
+ansible_become_pass: ultrasecure

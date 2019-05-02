@@ -1,0 +1,6 @@
+---
+# Victim group variables
+
+ansible_user: demouser
+ansible_ssh_pass: ilikecookies
+ansible_become_pass: ilikecookies

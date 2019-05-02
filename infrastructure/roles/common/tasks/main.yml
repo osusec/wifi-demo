@@ -1,0 +1,6 @@
+---
+# Common tasks run on all hosts
+# Based on https://github.com/ansible/ansible-examples/blob/master/lamp_simple/roles/common/tasks/main.yml
+
+- name: Install htop
+  apt: name=htop state=present

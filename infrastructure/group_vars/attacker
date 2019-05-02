@@ -1,0 +1,6 @@
+---
+# Attacker group variables
+
+ansible_user: badguy
+ansible_ssh_pass: gimmedamoney
+ansible_become_pass: gimmedamoney
