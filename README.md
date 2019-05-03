@@ -1,10 +1,9 @@
-# wifi-demo
-Wifi MitM/Snooping Demo
+# Disclaimer
+Do not run this on campus without having spoken with the Information Security Office! Use of these tools can result in an [Acceptable Use Policy](https://policy.oregonstate.edu/UPSM/08-005_acceptable_use_computing_resources) violation (which is bad).
+
+There are plaintext passwords in this file and in the Ansible files. This is not good! Don't use this for any test or production system, these VMs are isolated and only in existence for a short period of time for the demo.
 
 # Infrastructure Setup
-
-## Note
-There are plaintext passwords in this file and in the Ansible files. This is not good! Don't use this for any test or production system, these VMs are isolated and only in existence for a short period of time for the demo.
 
 ## Setup Instructions
 1. Setup the VMs as shown below using VBox or VMware
