@@ -2,3 +2,18 @@
 # Deploy demo site
 
 - name: Copy over source code
+  copy:
+    src: website_code/
+    dest: "/var/www/{{ webserver_dns }}/"
+
+- name: Configure vhost
+  template:
+    src: vhost.conf.j2
+    dest: "/etc/apache2/sites-available/{{ webserver_dns }}.conf"
+
+- name: Enable vhost
+  command: a2ensite {{ webserver_dns }}
+  args:
+    creates: "/etc/apache2/sites-enabled/{{ webserver_dns }}.conf"
+  notify:
+    - restart apache
