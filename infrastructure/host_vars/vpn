@@ -1,5 +1,5 @@
 ---
-# VPN server group variables
+# VPN server host variables
 
 ansible_user: vpnuser
 ansible_ssh_pass: cantsniffthis

@@ -1,0 +1,4 @@
+---
+# Configure webserver
+
+- include: setup_apache.yml

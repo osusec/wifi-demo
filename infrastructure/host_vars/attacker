@@ -1,5 +1,5 @@
 ---
-# Attacker group variables
+# Attacker host variables
 
 ansible_user: badguy
 ansible_ssh_pass: gimmedamoney

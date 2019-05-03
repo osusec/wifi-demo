@@ -1,11 +1,4 @@
-[webserver]
-172.20.10.30
-
-[vpn]
-172.20.10.40
-
-[attacker]
-172.20.10.50
-
-[victim]
-172.20.10.60
+webserver ansible_host=172.20.10.30
+vpn ansible_host=172.20.10.40
+attacker ansible_host=172.20.10.50
+victim ansible_host=172.20.10.60

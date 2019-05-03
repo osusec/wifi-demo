@@ -5,8 +5,12 @@ There are plaintext passwords in this file and in the Ansible files. This is not
 
 ## Setup Instructions
 1. Setup the VMs as shown below using VBox or VMware
-2. Update the host vars file with the appropriate MAC addresses
-3. Run the Ansible playbook from control
+2. Install sshpass
+   - Should be in your repos
+   - Mac: `brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb`
+3. Update the host vars file with the appropriate MAC addresses (TBD)
+4. Make sure it all works: `ansible -i hosts all -m ping`
+5. Run the Ansible playbook: `ansible-playbook -i hosts site.yml`
 
 ## Physical Systems
  - Control System (not shown to attendee)
@@ -31,6 +35,8 @@ Base VM config (unless otherwise noted):
    2. Bridged over wired host NIC
       - Subnet mask: /24 (255.255.255.0)
       - Gateway IP: 172.20.10.1
+  - Install Python after install finishes:
+    - `sudo apt -y install python`
 
 Specific VM configs:
  - Webserver

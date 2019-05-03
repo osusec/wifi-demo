@@ -2,5 +2,21 @@
 # Common tasks run on all hosts
 # Based on https://github.com/ansible/ansible-examples/blob/master/lamp_simple/roles/common/tasks/main.yml
 
-- name: Install htop
-  apt: name=htop state=present
+- name: Upgrade packages
+  apt:
+    upgrade: dist
+    force_apt_get: true
+    update_cache: yes
+
+- name: Install common tools
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - htop
+
+- name: Setup hosts file
+  template:
+    src: hosts.j2
+    dest: /etc/hosts

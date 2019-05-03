@@ -1,0 +1,6 @@
+---
+# Test host vars
+
+ansible_user: zander
+ansible_ssh_pass: 1234asdf
+ansible_become_pass: 1234asdf

@@ -1,5 +1,5 @@
 ---
-# Webserver group variables
+# Webserver host variables
 
 ansible_user: webuser
 ansible_ssh_pass: ultrasecure

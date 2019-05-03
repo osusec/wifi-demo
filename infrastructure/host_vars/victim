@@ -1,5 +1,5 @@
 ---
-# Victim group variables
+# Victim host variables
 
 ansible_user: demouser
 ansible_ssh_pass: ilikecookies
