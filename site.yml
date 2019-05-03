@@ -5,9 +5,23 @@
   hosts: all
   roles:
     - common
-    - webserver
 
 - name: apply webserver config
   hosts: webserver
   roles:
      - webserver
+
+- name: apply vpnserver config
+  hosts: vpnserver
+  roles:
+    - vpnserver
+
+- name: build attacker system
+  hosts: attacker
+  roles:
+    - attacker
+
+- name: build victim system
+  hosts: victim
+  roles:
+    - victim
