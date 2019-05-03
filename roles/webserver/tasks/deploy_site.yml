@@ -1,0 +1,4 @@
+---
+# Deploy demo site
+
+- name: Copy over source code

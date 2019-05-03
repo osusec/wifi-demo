@@ -1,4 +1,0 @@
----
-# Group vars for all hosts
-
-ansible_become: yes

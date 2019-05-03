@@ -1,0 +1,5 @@
+---
+# Group vars for all hosts
+
+ansible_become: yes
+webserver_dns: wifidemo.lan

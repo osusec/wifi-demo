@@ -1,0 +1,13 @@
+test ansible_host=172.16.58.141
+
+[webserver]
+test
+
+[vpnserver]
+test
+
+[attacker]
+test
+
+[victim]
+test

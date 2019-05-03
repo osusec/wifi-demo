@@ -15,5 +15,7 @@
   lineinfile:
     path: /etc/apache2/mods-enabled/dir.conf
     regexp: "Directory"
-    line: "        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm"
+    line: "\tDirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm"
   notify: restart apache
+
+- name: Configure virtualhost

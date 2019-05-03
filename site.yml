@@ -1,0 +1,13 @@
+---
+# Deploy OSUSEC WiFi demo
+
+- name: apply common config
+  hosts: all
+  roles:
+    - common
+    - webserver
+
+- name: apply webserver config
+  hosts: webserver
+  roles:
+     - webserver
