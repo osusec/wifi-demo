@@ -19,8 +19,18 @@ There are plaintext passwords in this file and in the Ansible files. This is not
    - Can be virtualized if host system is running Windows (Ansible control system can't be run on Windows).
  - Attacker System
  - Victim System
+ - WiFi Access Point
+   - This repo contains a file that can be used to restore settings to a Belkin N600.
 
 Attacker VM has to be on the Attacker System, Victim VM has to be on Victim System, and the other two VMs can be on either of those systems. The Control System is not used to run VMs, only for orchestration via the wired network.
+
+Configure the following settings on the WiFi AP:
+ - SSID: `OSUSEC-Demo`
+ - Use WPA2
+   - PSK: `hackdatboi`
+ - Address: 172.16.10.254
+ - Mask: 255.255.255.0
+Optionally, you can just restore the settings in `router.conf` to a N600.
 
 ## Virtual Machines
 This demo requires 4 VMs.
