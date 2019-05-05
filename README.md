@@ -10,6 +10,9 @@ There are plaintext passwords in this file and in the Ansible files. This is not
 2. Install sshpass
    - Should be in your repos
    - Mac: `brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb`
+   - Debian/Ubuntu and its derivatives: `sudo apt install sshpass`
+   - RedHat/CentOS: `yum install sshpass`
+   - Windows: You can't use `sshpass` on Windows
 3. Update the host vars file with the appropriate MAC addresses (TBD)
 4. Make sure it all works: `ansible -i hosts all -m ping`
 5. Run the Ansible playbook: `ansible-playbook -i hosts site.yml`
