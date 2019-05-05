@@ -1,0 +1,9 @@
+---
+# Setup EasyRSA CA
+
+- name: 
+
+- name: Init PKI
+  command: EasyRSA-v3.0.6/easyrsa init-pki
+  args:
+    creates: EasyRSA-v3.0.6/pki/

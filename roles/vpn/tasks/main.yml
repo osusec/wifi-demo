@@ -1,0 +1,4 @@
+---
+# VPN server tasks
+
+- include: install_software.yml

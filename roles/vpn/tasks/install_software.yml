@@ -1,0 +1,17 @@
+---
+# Install openvpn/EasyRSA for the vpn server
+
+- name: Install OpenVPN
+  apt:
+    name: "openvpn"
+    state: present
+
+- name: Download EasyRSA
+  get_url:
+    url: "https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz"
+    dest: /tmp/easyrsa.tgz
+
+- name: Uncompress EasyRSA
+  command: tar xvzf /tmp/easyrsa.tgz
+  args:
+    creates: EasyRSA-v3.0.6/
