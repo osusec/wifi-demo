@@ -1,12 +1,10 @@
 test ansible_host=172.16.58.141
+attacker ansible_host=172.16.74.129
 
 [webserver]
 test
 
 [vpnserver]
-test
-
-[attacker]
 test
 
 [victim]

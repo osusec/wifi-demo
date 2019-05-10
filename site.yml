@@ -1,27 +1,28 @@
 ---
 # Deploy OSUSEC WiFi demo
 
-- name: apply common config
-  hosts: all
-  roles:
-    - common
+#- name: apply common config
+#  hosts: all
+#  roles:
+#    - common
 
-- name: apply webserver config
-  hosts: webserver
-  roles:
-     - webserver
+#- name: apply webserver config
+#  hosts: webserver
+#  roles:
+#     - webserver
 
-- name: apply vpnserver config
-  hosts: vpnserver
-  roles:
-    - vpnserver
+#- name: apply vpnserver config
+#  hosts: vpnserver
+#  roles:
+#    - vpnserver
 
 - name: build attacker system
   hosts: attacker
   roles:
-    - attacker
+    - common
+#    - attacker
 
-- name: build victim system
-  hosts: victim
-  roles:
-    - victim
+#- name: build victim system
+#  hosts: victim
+#  roles:
+#    - victim

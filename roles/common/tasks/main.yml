@@ -15,6 +15,7 @@
   vars:
     packages:
       - htop
+      - libnm-glib-dev
 
 - name: Setup hosts file
   template:

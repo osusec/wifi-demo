@@ -1,0 +1,4 @@
+---
+# Attacker role
+
+- include: install_software.yml
