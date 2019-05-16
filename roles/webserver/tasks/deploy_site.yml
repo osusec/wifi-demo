@@ -3,7 +3,7 @@
 
 - name: Copy over source code
   copy:
-    src: website_code/
+    src: files/website_code/
     dest: "/var/www/{{ webserver_dns }}/"
 
 - name: Configure vhost

@@ -1,0 +1,4 @@
+---
+# Install necessary software for the attacker
+
+- name: install aircrack-ng
