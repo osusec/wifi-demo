@@ -79,3 +79,8 @@ Specific VM configs:
    - Wired IP: 172.20.10.60
    - Username: `demouser`
    - Password: `ilikecookies`
+  - MitM box
+   - WiFi IP: 172.16.10.70
+   - Wired IP: 172.20.10.70
+   - Username: `mitmuser`
+   - Password: `istoleyourpass`

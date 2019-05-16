@@ -3,3 +3,4 @@
 
 ansible_become: yes
 webserver_dns: wifidemo.lan
+mitm_dns: wifidemo-mitm.lan

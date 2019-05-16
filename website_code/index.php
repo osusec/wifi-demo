@@ -10,11 +10,10 @@
 	if (isset($_POST['username'])) {
 		echo "You provided the following data: ";
 		echo json_encode($_POST);
-		echo "\n";
-	} else {
-		echo "Click <a href='login.php'>here</a> to login.";
+		echo "<br><br>";
 	}
 ?>
+		Click <a href='login.php'>here</a> to login.
 		</p>
 	</body>
 </html>

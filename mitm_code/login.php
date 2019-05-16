@@ -3,7 +3,7 @@
 	<title>OSUSEC Wifi Demo | Login</title>
 </head>
 <body>
-	<form action="index.php" method="post">
+	<form action="redirect.html" method="get">
 		<table>
 			<tr>
 				<td>Username</td>

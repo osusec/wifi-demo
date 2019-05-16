@@ -1,0 +1,21 @@
+---
+# Setup Apache for the demo site
+
+- name: Install packages
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - apache2
+      - php
+      - libapache2-mod-php
+      - php7.2-curl
+
+- name: Fix dir.conf for index.php
+  lineinfile:
+    path: /etc/apache2/mods-enabled/dir.conf
+    regexp: "Directory"
+    line: "\tDirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm"
+  notify:
+    - restart apache

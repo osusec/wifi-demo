@@ -1,0 +1,8 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@{{ mitm_dns }}
+    ServerName {{ mitm_dns }}
+    ServerAlias www.{{ mitm_dns }}
+    DocumentRoot /var/www/{{ mitm_dns }}
+    ErrorLog ${APACHE_LOG_DIR}/error.{{ mitm_dns }}.log
+    CustomLog ${APACHE_LOG_DIR}/access.{{ mitm_dns }}.log combined
+</VirtualHost>

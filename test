@@ -1,13 +1,14 @@
-test ansible_host=172.16.58.141
+#test ansible_host=172.16.58.141
 
-[webserver]
-test
+webserver ansible_host=192.168.1.57
+victim ansible_host=192.168.1.55
+mitm ansible_host=192.168.1.59
 
-[vpnserver]
-test
-
-[attacker]
-test
-
-[victim]
-test
+#[vpnserver]
+#test
+#
+#[attacker]
+#test
+#
+#[victim]
+#test

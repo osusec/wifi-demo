@@ -1,0 +1,6 @@
+---
+# Attacker host variables
+
+ansible_user: mitmuser
+ansible_ssh_pass: istoleyourpass
+ansible_become_pass: istoleyourpass 
