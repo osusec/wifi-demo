@@ -3,7 +3,7 @@
 
 - name: Copy over source code
   copy:
-    src: mitm_code/
+    src: files/mitm_code/
     dest: "/var/www/{{ mitm_dns }}/"
 
 - name: Configure vhost

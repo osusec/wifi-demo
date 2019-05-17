@@ -11,9 +11,16 @@
 		echo "You provided the following data: ";
 		echo json_encode($_POST);
 		echo "<br><br>";
+		echo "<script>
+		setTimeout(() => {
+			window.location.href = 'http://wifidemo.lan';
+		}, 6000);
+		</script>";
 	}
 ?>
 		Click <a href='login.php'>here</a> to login.
+		<br>
+		Click <a href='http://wifidemo-mitm.lan'>here</a> to login [mitm].
 		</p>
 	</body>
 </html>

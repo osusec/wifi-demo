@@ -60,7 +60,7 @@
         document.getElementById("username").innerHTML = user;
         document.getElementById("password").innerHTML = pass;
 
-        setTimeout(redirect, 3000);
+        setTimeout(redirect, 6000);
         function redirect() {
             post("http://wifidemo.lan/index.php", {username: user + "_bad", password: pass + "_1234"});
         }
